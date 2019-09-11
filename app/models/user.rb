@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :gardens
   has_many :bookings
 
-  validates :name, :photo, presence: true
+  # validates :name, :photo, presence: true
 end
