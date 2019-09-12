@@ -1,7 +1,9 @@
-<h1>This is the index page for all the gardens</h1>
+<div style="margin-top: 80px">
+  <h1>This is the index page for all the gardens</h1>
 
-<% @gardens.each do |garden| %>
-  <%= link_to garden_path(garden) do %>
-    <p><%= garden.title %></p>
+  <% @gardens.each do |garden| %>
+    <%= link_to garden_path(garden) do %>
+      <p><%= garden.title %></p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
