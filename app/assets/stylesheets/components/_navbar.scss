@@ -7,6 +7,30 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  p {
+    font-size: 13px;
+    margin: 0 !important;
+  }
+  i {
+    margin-right: 5px;
+  }
+}
+
+#nav {
+  background: transparent;
+  transition: background 300ms linear;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 500;
+  padding-left: 30px;
+  padding-right: 30px;
 }

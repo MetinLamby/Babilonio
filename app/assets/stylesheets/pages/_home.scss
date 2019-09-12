@@ -1,1 +1,68 @@
-// Specific CSS for your home-page
+#circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #FDF3EB;
+  margin-top: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  i {
+    font-size: 40px;
+  }
+}
+
+.meet-hosts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+.host-img-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  .host-img {
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), image_url("host-img-one.jpg");
+    background-size: cover;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+  }
+  .host-desc {
+    height: 400px;
+    width: 600px;
+    margin-left: -150px;
+    background: white;
+    padding: 50px;
+    border-radius: 5px;
+  }
+}
+
+
+
+.get-started {
+  margin-top: 80px;
+  height: 600px;
+  width: 100vw;
+  display: flex;
+  .get-started-left {
+    height: 100%;
+    width: 50%;
+    background: #F2994A;
+    padding: 50px;
+  }
+  .get-started-right {
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), image_url("get-started-cover.jpg");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 50%;
+  }
+}
+

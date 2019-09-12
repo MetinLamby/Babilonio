@@ -1,5 +1,49 @@
-<h1>This is the home page of Babilonio</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id="banner">
+  <h1>Explore. Book. Enjoy.</h1>
+  <p>Botanical Gardens, Tropical Gardens, Yards and many more.</p>
+  <%= link_to gardens_path do %>
+    <div class="button">
+      <p>Start exploring</p>
+    </div>
+  <% end %>
+</div>
 
 
-<%= link_to "See all available gardens", gardens_path %>
+<div style="display: flex; justify-content: space-around;">
+  <div id="circle">
+    <i class="fas fa-long-arrow-alt-down"></i>
+  </div>
+</div>
+
+
+<div class="meet-hosts">
+  <div style="display: flex">
+    <h1 style="color: #3AB56E">Meet</h1><h1 style="color: transparent;">l</h1><h1>our hosts</h1>
+  </div>
+  <p>Our hosts come from all walks of life but they all have one thing in common. Their passion for gardens.</p>
+
+  <div class="host-img-desc">
+    <div class="host-img">
+      <p style="display: none;">Displaynone</p>
+    </div>
+    <div class="host-desc">
+      <h3>Cassy Myers</h3>
+      <p>Software Enginer</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deleniti vitae sunt, iure dolorum perferendis architecto ab, labore aspernatur repudiandae temporibus. Odio neque porro dignissimos consequatur ut omnis, temporibus dolor ad iure, sit illo debitis ex officiis veniam nesciunt unde!</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="get-started">
+  <div class="get-started-left">
+    <h3>Start Exploring</h3>
+    <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deleniti vitae sunt, iure dolorum perferendis architecto ab, labore aspernatur repudiandae temporibus. Odio neque porro dignissimos consequatur ut omnis, temporibus dolor ad iure, sit illo debitis ex officiis veniam nesciunt unde!</p>
+  </div>
+  <div class="get-started-right">
+    <p style="display: none;">Displaynone</p>
+  </div>
+</div>
+
