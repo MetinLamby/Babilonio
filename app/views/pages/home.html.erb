@@ -40,64 +40,28 @@
 
 <div class="start-exploring">
   <h1>Gardens all around the world available to you</h1>
-<!--   <div class="container"> -->
+  <p>Discover our variety of gardens.</p>
     <div class="row">
+      <% @gardens.each do |garden| %>
       <div class="col-sm-6 col-md-4 col-lg-4 home-card">
-        <div class="home-card-img">
-          <p>img</p>
+        <div class="home-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path garden.photo %>')">
+          <h2 style="color: white; margin-bottom: 0;"><%= garden.garden_type %></h2>
         </div>
-          <div class="home-card-desc">
-            <h5>Garden.type</h5>
-            <p>Garden type desc</p>
-          </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-4 home-card">
-        <div class="home-card-img">
-          <p>img</p>
-        </div>
-          <div class="home-card-desc">
-            <h5>Garden.type</h5>
-            <p>Garden type desc</p>
-          </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-4 home-card">
-        <div class="home-card-img">
-          <p>img</p>
-        </div>
-          <div class="home-card-desc">
-            <h5>Garden.type</h5>
-            <p>Garden type desc</p>
-          </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-4 home-card">
-        <div class="home-card-img">
-          <p>img</p>
-        </div>
-          <div class="home-card-desc">
-            <h5>Garden.type</h5>
-            <p>Garden type desc</p>
-          </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-4 home-card">
-        <div class="home-card-img">
-          <p>img</p>
-        </div>
-          <div class="home-card-desc">
-            <h5>Garden.type</h5>
-            <p>Garden type desc</p>
-          </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-4 home-card">
-        <div class="home-card-img">
-          <p>img</p>
-        </div>
-          <div class="home-card-desc">
-            <h5>Garden.type</h5>
-            <p>Garden type desc</p>
-          </div>
-      </div>
-
+      <% end %>
     </div>
-<!--   </div> -->
 </div>
 
+
+<div class="container">
+  <div class="become-host">
+    <div style="display: flex">
+      <h1 style="color: #3AB56E">Become</h1><h1 style="color: transparent;">l</h1><h1>a host</h1>
+    </div>
+    <p>Do you have a love for gardens? Why don't you share your love with others?</p>
+
+    <div class="">
+
+    </div>
+  </div>
+</div>

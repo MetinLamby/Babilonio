@@ -25,15 +25,25 @@
   height: 350px;
   width: 1fr;
   background: green;
-  border: solid 10px red;
+  border: solid 10px #F9E7E7;
   flex-grow: 1;
   padding: 0;
+  border-radius: 25px;
   .home-card-img {
-    height: 50%;
+    height: 100%;
     width: 100%;
-    background: grey;
+    flex-grow: 0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 7px;
+    transition: all .5s;
   }
-  .home-card-desc {
-    height: 50%;
-  }
+}
+
+.home-card:hover .home-card-img,
+.home-card:focus .home-card-img {
+  transform: scale(1.035);
 }

@@ -48,16 +48,25 @@
 
 .start-exploring {
   margin-top: 80px;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   background: #F9E7E7;
   padding: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /*justify-content: space-around;*/
   flex-direction: column;
   .row {
     width: 80vw;
   }
 }
 
+
+
+.become-host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
