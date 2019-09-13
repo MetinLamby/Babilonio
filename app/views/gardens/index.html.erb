@@ -1,9 +1,22 @@
-<div style="margin-top: 80px">
-  <h1>This is the index page for all the gardens</h1>
+<div style="margin-top: 80px" class="container">
+  <h3>We found <%= @gardens.count %> gardens for you</h3>
 
   <% @gardens.each do |garden| %>
     <%= link_to garden_path(garden) do %>
-      <p><%= garden.title %></p>
+    <div class="garden-card">
+      <div class="card-img">
+        <p>img</p>
+      </div>
+      <div class="card-desc">
+        <p><%= garden.garden_type %></p>
+        <h6><%= garden.title %></h6>
+        <p><%= garden.price %>$</p>
+      </div>
+    </div>
     <% end %>
   <% end %>
 </div>
+
+
+
+
