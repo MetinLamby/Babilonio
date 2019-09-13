@@ -20,3 +20,20 @@
     padding: 20px;
   }
 }
+
+.home-card {
+  height: 350px;
+  width: 1fr;
+  background: green;
+  border: solid 10px red;
+  flex-grow: 1;
+  padding: 0;
+  .home-card-img {
+    height: 50%;
+    width: 100%;
+    background: grey;
+  }
+  .home-card-desc {
+    height: 50%;
+  }
+}
