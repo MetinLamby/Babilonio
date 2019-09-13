@@ -34,6 +34,7 @@
     border-radius: 5px;
   }
   .host-desc {
+    box-shadow: 0 0 15px grey;
     height: 400px;
     width: 600px;
     margin-left: -150px;
@@ -45,24 +46,18 @@
 
 
 
-.get-started {
+.start-exploring {
   margin-top: 80px;
-  height: 600px;
+  height: 100vh;
   width: 100vw;
+  background: #F9E7E7;
+  padding: 50px;
   display: flex;
-  .get-started-left {
-    height: 100%;
-    width: 50%;
-    background: #3AB56E;
-    padding: 50px;
-  }
-  .get-started-right {
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), image_url("get-started-cover.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100%;
-    width: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .row {
+    width: 80vw;
   }
 }
 
