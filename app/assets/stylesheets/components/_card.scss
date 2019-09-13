@@ -1,0 +1,22 @@
+.garden-card {
+  height: 200px;
+  width: 740px;
+  display: flex;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  .card-img {
+    background: grey;
+    height: 100%;
+    width: 35%;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+  .card-desc {
+    background: white;
+    height: 100%;
+    width: 65%;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: 20px;
+  }
+}
