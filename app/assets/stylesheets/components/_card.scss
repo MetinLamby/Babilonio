@@ -10,6 +10,9 @@
     width: 35%;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
+    background-size: cover;
+    background-position: center;
+    color: transparent;
   }
   .card-desc {
     background: white;
@@ -22,7 +25,7 @@
 }
 
 .home-card {
-  height: 350px;
+  height: 220px;
   width: 1fr;
   background: green;
   border: solid 10px #F9E7E7;

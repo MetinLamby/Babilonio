@@ -1,22 +1,37 @@
-<div style="margin-top: 80px" class="container">
-  <h3>We found <%= @gardens.count %> gardens for you</h3>
-
-  <% @gardens.each do |garden| %>
-    <%= link_to garden_path(garden) do %>
-    <div class="garden-card">
-      <div class="card-img">
-        <p>img</p>
+<div style="margin-top: 80px" class="container-fluid">
+  <% if @gardens.count == 0 %>
+    <h3>Sorry, there are no gardens uploaded yet</h3>
+  <% else %>
+    <div class= "index-cards-map">
+      <div class= "index-cards">
+        <h3>We found <%= @gardens.count %> gardens for you</h3>
+        <% @gardens.each do |garden| %>
+          <%= link_to garden_path(garden) do %>
+            <div class="garden-card">
+              <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path garden.photo, crop: :fill %>')">
+                 img
+              </div>
+              <div class="card-desc">
+                <p><%= garden.garden_type %></p>
+                <h6><%= garden.title %></h6>
+                <p><%= garden.price %>$</p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
       </div>
-      <div class="card-desc">
-        <p><%= garden.garden_type %></p>
-        <h6><%= garden.title %></h6>
-        <p><%= garden.price %>$</p>
+      <div class= "index-map">
+        <div
+          id="map"
+          style="width: 100%;
+          height: 100vh;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+        ></div>
       </div>
     </div>
-    <% end %>
   <% end %>
 </div>
-
 
 
 

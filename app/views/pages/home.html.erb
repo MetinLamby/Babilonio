@@ -39,7 +39,9 @@
 
 
 <div class="start-exploring">
-  <h1>Gardens all around the world available to you</h1>
+  <div style="display: flex;">
+    <h1>Gardens</h1><h1 style="color: transparent;">l</h1><h1 style="color: #3AB56E">all around the world</h1><h1 style="color: transparent;">l</h1><h1> available to you</h1>
+  </div>
   <p>Discover our variety of gardens.</p>
     <div class="row">
       <% @gardens.each do |garden| %>
@@ -56,7 +58,7 @@
 <div class="container">
   <div class="become-host">
     <div style="display: flex">
-      <h1 style="color: #3AB56E">Become</h1><h1 style="color: transparent;">l</h1><h1>a host</h1>
+      <h1>Ready to</h1><h1 style="color: transparent;">l</h1><h1 style="color: #3AB56E">become a host?</h1>
     </div>
     <p>Do you have a love for gardens? Why don't you share your love with others?</p>
 
@@ -65,3 +67,17 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  const navbar = document.getElementById("nav");
+
+window.onscroll = function(){
+  if (window.pageYOffset > 80) {
+    navbar.style.background = "white";
+    console.log("Hello");
+  }
+  else {
+    navbar.style.background = "transparent";
+  }
+}
+</script>
