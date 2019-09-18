@@ -1,3 +1,8 @@
+
 import "bootstrap";
 
-import '../components/_navbar_scroll.js';
+import 'mapbox-gl/dist/mapbox-gl.css';
+// internal imports
+import { initMapbox } from '../plugins/init_mapbox';
+
+initMapbox();

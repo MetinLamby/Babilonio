@@ -27,7 +27,7 @@ puts "Created #{User.count} fake users..."
 # Creating fake gardens
 puts "Creating fake gardens..."
 
-berlin_address = [
+address_array = [
   "Unter den Linden 77, 10117 Berlin",
   "Albrechtstraße 22, 10117 Berlin",
   "Krausnickstraße 9, 10115 Berlin",
@@ -71,7 +71,7 @@ garden_types_array = ["Flower Garden", "Container Garden", "Yard", "Back Garden"
     title: Faker::Lorem.sentence(word_count: 15),
     garden_type: garden_types_array.sample,
     price: rand(5..20).to_s,
-    # address: berlin_address.sample,
+    address: address_array.sample,
     user_id: rand(User.first.id..User.last.id))
   garden.remote_photo_url = urls.sample
   garden.save!

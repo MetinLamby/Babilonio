@@ -1,0 +1,26 @@
+.index-cards-map {
+  display: flex;
+  width: 100%;
+  .index-cards {
+    flex-grow: 1;
+    width: 60%;
+    a {
+      color: black;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    a:hover .garden-card{
+      /*transform: scale(1.03);*/
+      box-shadow: 0 0 15px grey;
+    }
+  }
+  .index-map {
+    width: 40%;
+    margin-top: 40px;
+    #map {
+      position: sticky;
+      top: 0;
+    }
+  }
+}
