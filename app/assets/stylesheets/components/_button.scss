@@ -15,3 +15,29 @@
     text-decoration: none;
   }
 }
+
+
+.sign-up-btn {
+  padding: 30px;
+  background: #219653;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /*width: 50%;*/
+  margin-left: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px grey;
+}
+
+.become-host-btn {
+  padding: 30px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  margin-right: 5px;
+  border-radius: 5px;
+  color: #219653;
+  box-shadow: 0 0 10px grey;
+}
