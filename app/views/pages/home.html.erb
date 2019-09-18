@@ -1,6 +1,8 @@
 <div id="banner">
-  <h1>Explore. Book. Enjoy.</h1>
-  <p>Botanical Gardens, Tropical Gardens, Yards and many more.</p>
+  <h1>Bonita te amo❤️</h1>
+  <!-- <h1>Explore. Book. Enjoy.</h1> -->
+  <p>Anna du bist sooo geil</p>
+  <!-- <p>Botanical Gardens, Tropical Gardens, Yards and many more.</p> -->
   <%= link_to gardens_path do %>
   <div class="button">
     <p>Start exploring</p>
@@ -9,9 +11,9 @@
 </div>
 
 
-<div style="display: flex; justify-content: space-around;">
+<div style="display: flex; justify-content: space-around;" id="down">
   <div id="circle">
-    <i class="fas fa-long-arrow-alt-down"></i>
+    <a href="#down" style="color: black"><i class="fas fa-long-arrow-alt-down"></i></a>
   </div>
 </div>
 
@@ -22,7 +24,6 @@
       <h1 style="color: #3AB56E">Meet</h1><h1 style="color: transparent;">l</h1><h1>our hosts</h1>
     </div>
     <p>Our hosts come from all walks of life but they all have one thing in common. Their passion for gardens.</p>
-
     <div class="host-img-desc">
       <div class="host-img">
         <p style="display: none;">Displaynone</p>
@@ -60,13 +61,37 @@
     <div style="display: flex">
       <h1>Ready to</h1><h1 style="color: transparent;">l</h1><h1 style="color: #3AB56E">become a host?</h1>
     </div>
-    <p>Do you have a love for gardens? Why don't you share your love with others?</p>
-
-    <div class="">
-
+    <p>Do you have a love for gardens? Why don't you share it with others?</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-4 host-third">
+          <%= image_tag('form.svg') %>
+          <p>Tell us about your garden. We're good listeners.</p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 host-third">
+          <%= image_tag('upload.svg') %>
+          <p>Upload your garden and wait for others to see and book it.</p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 host-third">
+          <%= image_tag('connect.svg') %>
+          <p>Connect with people who appreciate your great efforts.</p>
+        </div>
+      </div>
+      <div class="sign-up-in">
+        <div class="become-host-btn">
+          <p style="margin: 0;">Become a host</p>
+        </div>
+        <%= link_to new_user_session_path do %>
+          <div class="sign-up-btn">
+            <p style="margin: 0;">Sign up</p>
+          </div>
+        <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
 
 <script type="text/javascript">
   const navbar = document.getElementById("nav");

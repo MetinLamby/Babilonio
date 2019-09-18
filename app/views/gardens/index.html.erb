@@ -8,7 +8,7 @@
         <% @gardens.each do |garden| %>
           <%= link_to garden_path(garden) do %>
             <div class="garden-card">
-              <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path garden.photo, crop: :fill %>')">
+              <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('<%= cl_image_path garden.photo, crop: :fill %>')">
                  img
               </div>
               <div class="card-desc">
@@ -35,3 +35,16 @@
 
 
 
+<script type="text/javascript">
+  const navbar = document.getElementById("nav");
+
+window.onscroll = function(){
+  if (window.pageYOffset > 80) {
+    navbar.style.background = "white";
+    console.log("Hello");
+  }
+  else {
+    navbar.style.background = "transparent";
+  }
+}
+</script>
