@@ -1,8 +1,6 @@
 <div id="banner">
-  <h1>Bonita te amo❤️</h1>
-  <!-- <h1>Explore. Book. Enjoy.</h1> -->
-  <p>Anna du bist sooo geil</p>
-  <!-- <p>Botanical Gardens, Tropical Gardens, Yards and many more.</p> -->
+  <h1>Explore. Book. Enjoy.</h1>
+  <p>Botanical Gardens, Tropical Gardens, Yards and many more.</p>
   <%= link_to gardens_path do %>
   <div class="button">
     <p>Start exploring</p>
@@ -78,9 +76,11 @@
         </div>
       </div>
       <div class="sign-up-in">
-        <div class="become-host-btn">
-          <p style="margin: 0;">Become a host</p>
-        </div>
+        <%= link_to new_garden_path do %>
+          <div class="become-host-btn">
+            <p style="margin: 0;">Become a host</p>
+          </div>
+        <% end %>
         <%= link_to new_user_session_path do %>
           <div class="sign-up-btn">
             <p style="margin: 0;">Sign up</p>

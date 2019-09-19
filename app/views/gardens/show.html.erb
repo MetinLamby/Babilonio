@@ -1,1 +1,51 @@
-<h1>Welcome to: <%= @garden.title %></h1>
+
+<div class="show-img" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('<%= cl_image_path @garden.photo, crop: :fill %>')">
+</div>
+
+<div class="container show-desc-price">
+  <div class="show-desc">
+    <h3><%= @garden.title %></h3>
+    <p><i class="fas fa-map-marker-alt"></i>   <%= @garden.address %></p>
+    <p><i class="fab fa-pagelines"></i>   <%= @garden.garden_type %></p>
+    <p><%= @garden.description %></p>
+  </div>
+  <div class="show-price">
+    <div>
+      <h3>Owner</h3>
+        <hr>
+      <div class="card-product">
+        <%= cl_image_tag @garden.user.photo %>
+        <div class="card-product-infos">
+          <h2><%= @garden.user.name %></h2>
+          <p><%= @garden.user.job %></p>
+        </div>
+      </div>
+    </div>
+    <div class="checkout">
+      <h3>Checkout</h3>
+      <hr>
+      <p>Total: <%= @garden.price %>$</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="book-now-btn">
+    <p style="margin: 0;">Book this garden</p>
+  </div>
+</div>
+
+<script type="text/javascript">
+  const navbar = document.getElementById("nav");
+
+window.onscroll = function(){
+  if (window.pageYOffset > 80) {
+    navbar.style.background = "white";
+    console.log("Hello");
+  }
+  else {
+    navbar.style.background = "transparent";
+  }
+}
+</script>
+
