@@ -1,21 +1,49 @@
 <div style="margin-top: 80px" class="container-fluid">
 
+  <% if @bookings.empty? == false %>
+  <div class="container">
+    <h3>Your bookings</h3>
+    <% @bookings.each do |booking| %>
+    <%= link_to garden_path(booking.garden) do %>
+    <div class="garden-card">
+      <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('<%= cl_image_path booking.garden.photo, crop: :fill %>')">
+       img
+     </div>
+     <div class="card-desc">
+      <p><%= booking.garden.garden_type %></p>
+      <h6><%= booking.garden.title %></h6>
+      <p><%= booking.garden.price %>$</p>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+</div>
+<% else %>
+<div style="height: 80vh;">
+  <h3>Sorry, you don't have any bookings yet</h3>
+</div>
+<% end %>
+
+<% if @gardens.empty? == false %>
 <div class="container">
-  <h3>These are your bookings</h3>
-  <% @bookings.each do |booking| %>
-  <%= link_to garden_path(booking.garden) do %>
+  <h3>Your offered gardens</h3>
+  <% @gardens.each do |garden| %>
+  <%= link_to garden_path(garden) do %>
   <div class="garden-card">
-    <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('<%= cl_image_path booking.garden.photo, crop: :fill %>')">
+    <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('<%= cl_image_path garden.photo, crop: :fill %>')">
      img
    </div>
    <div class="card-desc">
-    <p><%= booking.garden.garden_type %></p>
-    <h6><%= booking.garden.title %></h6>
-    <p><%= booking.garden.price %>$</p>
+    <p><%= garden.garden_type %></p>
+    <h6><%= garden.title %></h6>
+    <p><%= garden.price %>$</p>
   </div>
 </div>
 <% end %>
 <% end %>
+
 </div>
+
+<% end %>
 </div>
 

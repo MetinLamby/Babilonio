@@ -1,10 +1,12 @@
 <div style="margin-top: 80px" class="container-fluid">
   <%= simple_form_for :index, url: gardens_path, method: :get do |f| %>
-  <div class="search-form-control form-group">
-    <input class="form-control string required" type="text" name="query" id="search_query" />
+  <div class="search-form-control form-group" style="margin-bottom: 50px">
+    <input class="form-control string required" type="text" name="query" placeholder="Flower Garden, Container Garden, Yard, Back Garden, Botanical Garden, Tropical Garden" id="search_query" >
     <button name="button" type="submit" class="btn btn-flat">
       <i class="fas fa-search"></i> Search by garden type
     </button>
+    <%#= f.input :garden_type, collection: ["Flower Garden", "Container Garden", "Yard", "Back Garden", "Botanical Garden", "Tropical Garden"], label: 'Search by garden type' %>
+    <%#= f.button :submit %>
   </div>
   <% end %>
 
@@ -47,7 +49,7 @@
   const navbar = document.getElementById("nav");
 
   window.onscroll = function(){
-    if (window.pageYOffset > 80) {
+    if (window.pageYOffset > 40) {
       navbar.style.background = "white";
       console.log("Hello");
     }

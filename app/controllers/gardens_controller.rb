@@ -3,8 +3,15 @@ class GardensController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    if params[:query].present?
-      @gardens = Garden.geocoded.where(garden_type: params[:query])
+    if params[:query].nil?
+      @gardens = Garden.geocoded
+    elsif !["Flower Garden", "Container Garden", "Yard", "Back Garden", "Botanical Garden", "Tropical Garden"].include? params[:query].titleize
+      @gardens = Garden.geocoded
+      flash[:alert] = "This is not a garden type we offer"
+    elsif params[:query].present?
+      @gardens = Garden.geocoded.where(garden_type: params[:query].titleize)
+      @params = params[:query]
+      @params = nil
     else
       @gardens = Garden.geocoded
     end

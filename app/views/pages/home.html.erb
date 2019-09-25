@@ -45,9 +45,11 @@
     <div class="row">
       <% @gardens.each do |garden| %>
       <div class="col-sm-6 col-md-4 col-lg-4 home-card">
-        <div class="home-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path garden.photo %>')">
-          <h2 style="color: white; margin-bottom: 0;"><%= garden.garden_type %></h2>
-        </div>
+        <%= link_to gardens_path(query: garden.garden_type) do  %>
+          <div class="home-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path garden.photo %>')">
+            <h2 style="color: white; margin-bottom: 0;"><%= garden.garden_type %></h2>
+          </div>
+        <% end %>
       </div>
       <% end %>
     </div>
