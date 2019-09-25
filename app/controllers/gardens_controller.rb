@@ -26,9 +26,6 @@ class GardensController < ApplicationController
     end
   end
 
-
-
-
   def show
     @garden = Garden.find(params[:id])
     @booking = Booking.new

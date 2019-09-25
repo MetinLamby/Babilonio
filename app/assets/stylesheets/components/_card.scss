@@ -27,7 +27,7 @@
 .home-card {
   height: 220px;
   width: 1fr;
-  background: green;
+  background: lightgrey;
   border: solid 10px #F9E7E7;
   flex-grow: 1;
   padding: 0;
@@ -43,6 +43,9 @@
     justify-content: space-around;
     border-radius: 7px;
     transition: all .5s;
+  }
+  a:hover {
+    text-decoration: none;
   }
 }
 
