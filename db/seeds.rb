@@ -73,41 +73,73 @@ urls = [
   "https://images.unsplash.com/photo-1446070797306-0da248ac878d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
   "https://images.unsplash.com/photo-1534009502677-4e5080efa8c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
   "https://images.unsplash.com/photo-1545823812-046670c74194?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+  "https://images.unsplash.com/photo-1487798452839-c748a707a6b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
   "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 ]
 
 
 garden_types_array = ["Flower Garden", "Container Garden", "Yard", "Back Garden", "Botanical Garden", "Tropical Garden"]
 
-# tropical_garden = Garden.new(
-#   description: Faker::Lorem.sentence(word_count: 35),
-#   title: Faker::Lorem.sentence(word_count: 15),
-#   garden_type: "Tropical Garden",
-#   price: rand(5..20).to_s,
-#   address: address_array.sample,
-#   user_id: rand(User.first.id..User.last.id))
-# tropical_garden.remote_photo_url = "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-# tropical_garden.save!
+tropical_garden = Garden.new(
+  description: Faker::Lorem.sentence(word_count: 35),
+  title: "The best tropical garden in the world",
+  garden_type: "Tropical Garden",
+  price: rand(5..20).to_s,
+  address: address_array.sample,
+  user_id: rand(User.first.id..User.last.id))
+tropical_garden.remote_photo_url = "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+tropical_garden.save!
 
-# botanical_garden = Garden.new(
-#   description: Faker::Lorem.sentence(word_count: 35),
-#   title: Faker::Lorem.sentence(word_count: 15),
-#   garden_type: "Botanical Garden",
-#   price: rand(5..20).to_s,
-#   address: address_array.sample,
-#   user_id: rand(User.first.id..User.last.id))
-# botanical_garden.remote_photo_url = "https://images.unsplash.com/photo-1545823812-046670c74194?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-# botanical_garden.save!
+botanical_garden = Garden.new(
+  description: Faker::Lorem.sentence(word_count: 35),
+  title: "The best botanical garden in the world",
+  garden_type: "Botanical Garden",
+  price: rand(5..20).to_s,
+  address: address_array.sample,
+  user_id: rand(User.first.id..User.last.id))
+botanical_garden.remote_photo_url = "https://images.unsplash.com/photo-1545823812-046670c74194?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+botanical_garden.save!
 
-# botanical_garden = Garden.new(
-#   description: Faker::Lorem.sentence(word_count: 35),
-#   title: Faker::Lorem.sentence(word_count: 15),
-#   garden_type: "Botanical Garden",
-#   price: rand(5..20).to_s,
-#   address: address_array.sample,
-#   user_id: rand(User.first.id..User.last.id))
-# botanical_garden.remote_photo_url = "https://images.unsplash.com/photo-1545823812-046670c74194?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-# botanical_garden.save!
+back_garden = Garden.new(
+  description: Faker::Lorem.sentence(word_count: 35),
+  title: "The best back garden in the world",
+  garden_type: "Back Garden",
+  price: rand(5..20).to_s,
+  address: address_array.sample,
+  user_id: rand(User.first.id..User.last.id))
+back_garden.remote_photo_url = "https://images.unsplash.com/photo-1534009502677-4e5080efa8c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
+back_garden.save!
+
+flower_garden = Garden.new(
+  description: Faker::Lorem.sentence(word_count: 35),
+  title: "The best flower garden in the world",
+  garden_type: "Flower Garden",
+  price: rand(5..20).to_s,
+  address: address_array.sample,
+  user_id: rand(User.first.id..User.last.id))
+flower_garden.remote_photo_url = "https://images.unsplash.com/photo-1446070797306-0da248ac878d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+flower_garden.save!
+
+container_garden = Garden.new(
+  description: Faker::Lorem.sentence(word_count: 35),
+  title: "The best container garden in the world",
+  garden_type: "Container Garden",
+  price: rand(5..20).to_s,
+  address: address_array.sample,
+  user_id: rand(User.first.id..User.last.id))
+container_garden.remote_photo_url = "https://images.unsplash.com/photo-1487798452839-c748a707a6b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80"
+container_garden.save!
+
+yard = Garden.new(
+  description: Faker::Lorem.sentence(word_count: 35),
+  title: "The best yard in the world",
+  garden_type: "Yard",
+  price: rand(5..20).to_s,
+  address: address_array.sample,
+  user_id: rand(User.first.id..User.last.id))
+yard.remote_photo_url = "https://images.unsplash.com/photo-1560749003-f4b1e17e2dff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80"
+yard.save!
+
 
 20.times do |garden|
   garden = Garden.new(
