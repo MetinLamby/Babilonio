@@ -2,13 +2,12 @@ class GardensController < ApplicationController
 
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-  # def index
-  #   @gardens = Garden.all
-  # end
-
-
   def index
-    @gardens = Garden.geocoded
+    if params[:query].present?
+      @gardens = Garden.geocoded.where(garden_type: params[:query])
+    else
+      @gardens = Garden.geocoded
+    end
 
     @markers = @gardens.map do |garden|
       {
@@ -20,10 +19,13 @@ class GardensController < ApplicationController
     end
   end
 
+
+
+
   def show
     @garden = Garden.find(params[:id])
+    @booking = Booking.new
   end
-
 
   def new
     @garden = Garden.new

@@ -1,0 +1,21 @@
+<div style="margin-top: 80px" class="container-fluid">
+
+<div class="container">
+  <h3>These are your bookings</h3>
+  <% @bookings.each do |booking| %>
+  <%= link_to garden_path(booking.garden) do %>
+  <div class="garden-card">
+    <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('<%= cl_image_path booking.garden.photo, crop: :fill %>')">
+     img
+   </div>
+   <div class="card-desc">
+    <p><%= booking.garden.garden_type %></p>
+    <h6><%= booking.garden.title %></h6>
+    <p><%= booking.garden.price %>$</p>
+  </div>
+</div>
+<% end %>
+<% end %>
+</div>
+</div>
+
