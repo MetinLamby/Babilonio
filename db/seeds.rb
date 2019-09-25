@@ -28,6 +28,7 @@ puts "Creating fake users..."
     name: Faker::Name.first_name,
     email: Faker::Internet.email,
     job: Faker::Job.title,
+    description: Faker::Lorem.sentence(word_count: 35),
     password: "123456")
   user.remote_photo_url = owner_urls.sample
   user.save!

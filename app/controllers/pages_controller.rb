@@ -4,4 +4,9 @@ class PagesController < ApplicationController
   def home
     @gardens = Garden.first(6)
   end
+
+  def dashboard
+    @bookings = Booking.where(user_id: current_user.id)
+  end
+
 end

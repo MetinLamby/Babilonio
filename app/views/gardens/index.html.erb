@@ -1,50 +1,58 @@
 <div style="margin-top: 80px" class="container-fluid">
+  <%= simple_form_for :index, url: gardens_path, method: :get do |f| %>
+  <div class="search-form-control form-group">
+    <input class="form-control string required" type="text" name="query" id="search_query" />
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search"></i> Search by garden type
+    </button>
+  </div>
+  <% end %>
+
   <% if @gardens.count == 0 %>
-    <h3>Sorry, there are no gardens uploaded yet</h3>
+  <h3>Sorry, there are no gardens uploaded yet</h3>
   <% else %>
-    <div class= "index-cards-map">
-      <div class= "index-cards">
-        <h3>We found <%= @gardens.count %> gardens for you</h3>
-        <% @gardens.each do |garden| %>
-          <%= link_to garden_path(garden) do %>
-            <div class="garden-card">
-              <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('<%= cl_image_path garden.photo, crop: :fill %>')">
-                 img
-              </div>
-              <div class="card-desc">
-                <p><%= garden.garden_type %></p>
-                <h6><%= garden.title %></h6>
-                <p><%= garden.price %>$</p>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-      <div class= "index-map">
-        <div
-          id="map"
-          style="width: 100%;
-          height: 100vh;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-        ></div>
+  <div class= "index-cards-map">
+    <div class= "index-cards">
+      <h3>We found <%= @gardens.count %> gardens for you</h3>
+      <% @gardens.each do |garden| %>
+      <%= link_to garden_path(garden) do %>
+      <div class="garden-card">
+        <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('<%= cl_image_path garden.photo, crop: :fill %>')">
+         img
+       </div>
+       <div class="card-desc">
+        <p><%= garden.garden_type %></p>
+        <h6><%= garden.title %></h6>
+        <p><%= garden.address %></p>
+        <p><%= garden.price %>$</p>
       </div>
     </div>
-  <% end %>
+    <% end %>
+    <% end %>
+  </div>
+  <div class= "index-map">
+    <div
+    id="map"
+    style="width: 100%;
+    height: 100vh;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+  </div>
 </div>
-
-
+<% end %>
+</div>
 
 <script type="text/javascript">
   const navbar = document.getElementById("nav");
 
-window.onscroll = function(){
-  if (window.pageYOffset > 80) {
-    navbar.style.background = "white";
-    console.log("Hello");
+  window.onscroll = function(){
+    if (window.pageYOffset > 80) {
+      navbar.style.background = "white";
+      console.log("Hello");
+    }
+    else {
+      navbar.style.background = "transparent";
+    }
   }
-  else {
-    navbar.style.background = "transparent";
-  }
-}
 </script>

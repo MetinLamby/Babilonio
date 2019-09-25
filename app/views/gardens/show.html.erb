@@ -29,10 +29,19 @@
   </div>
 </div>
 
-<div class="container">
+
+<!-- <div class="container book-btn">
+  <%#= link_to new_garden_booking_path(@garden) do %>
   <div class="book-now-btn">
     <p style="margin: 0;">Book this garden</p>
   </div>
+  <%# end %>
+</div> -->
+
+<div class="container book-btn">
+  <%= simple_form_for [@garden, @booking] do |f| %>
+    <%= f.submit "Book this garden", class: "book-now-btn" %>
+  <% end %>
 </div>
 
 <script type="text/javascript">
